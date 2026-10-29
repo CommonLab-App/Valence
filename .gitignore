@@ -7,20 +7,9 @@ coverage/
 *.local
 .DS_Store
 .claude/settings.local.json
+.claude/worktrees/
+# Helpers' saved source pages, sweep outputs and screenshots (gigabytes; never shipped).
+.superpowers/
 src/chem-data/denylist.local.json
 # Written by scripts/fingerprint-sources.mjs for the no-quotation test. Not kept: see docs/research/phase-3/sources/README.md.
-docs/research/phase-3/sources/quotation-fingerprint.json
-docs/research/phase-4/sources/quotation-fingerprint.json
-docs/research/phase-5/sources/quotation-fingerprint.json
-docs/research/flame/sources/quotation-fingerprint.json
-docs/research/calorimetry/sources/quotation-fingerprint.json
-docs/research/cations/sources/quotation-fingerprint.json
-docs/research/lechatelier/sources/quotation-fingerprint.json
-docs/research/clock/sources/quotation-fingerprint.json
-docs/research/acetone/sources/quotation-fingerprint.json
-docs/research/cabbage/sources/quotation-fingerprint.json
-docs/research/density/sources/quotation-fingerprint.json
-docs/research/freezing/sources/quotation-fingerprint.json
-docs/research/reactions/sources/quotation-fingerprint.json
-docs/research/mixing/sources/quotation-fingerprint.json
-docs/research/hotcold/sources/quotation-fingerprint.json
+docs/research/*/sources/quotation-fingerprint.json
