@@ -342,7 +342,13 @@ export function About() {
           <h2 id="licence-heading" className="mb-1 text-lg font-medium">
             Licence
           </h2>
-          <p>Valence is free software under the MIT licence.</p>
+          <p>
+            Valence is free software under the MIT licence. It is part of{' '}
+            <a href="https://commonlab.app/" className="underline underline-offset-4">
+              CommonLab
+            </a>
+            .
+          </p>
         </section>
       </div>
     </>
