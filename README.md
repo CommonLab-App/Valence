@@ -9,9 +9,9 @@ An independent, browser-based molecule explorer and virtual general-chemistry la
 
 Valence recreates common general-chemistry bench labs so that anyone can do them, understand the chemistry and check their own results. It is a personal learning project with no connection to any school.
 
-**Try it in your browser:** https://firetailfab.com/valence/#/
+**Try it in your browser:** https://valencelab.app/#/
 
-[![The red cabbage pH lab: a rack of thirteen buffers, each tube a different colour from red at pH 1 to yellow at pH 13](docs/media-kit/screenshots/valence-lab-red-cabbage.png)](https://firetailfab.com/valence/#/)
+[![The red cabbage pH lab: a rack of thirteen buffers, each tube a different colour from red at pH 1 to yellow at pH 13](docs/media-kit/screenshots/valence-lab-red-cabbage.png)](https://valencelab.app/#/)
 
 ## What's in it
 

@@ -9,7 +9,7 @@
 
 Logos, screenshots and descriptions for writing about Valence. Everything here is free to use in coverage of Valence.
 
-- Try it: https://firetailfab.com/valence/#/
+- Try it: https://valencelab.app/#/
 - Source: https://github.com/zebadrabbit/Valence
 
 ## Fact sheet
@@ -91,7 +91,7 @@ Please do:
 
 - write the name as **Valence**, one word, capital V;
 - describe it as free and open source under the MIT licence;
-- link to https://firetailfab.com/valence/#/;
+- link to https://valencelab.app/#/;
 - credit it to Firetail Fab.
 
 Please avoid:
