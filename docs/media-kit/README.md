@@ -10,7 +10,7 @@
 Logos, screenshots and descriptions for writing about Valence. Everything here is free to use in coverage of Valence.
 
 - Try it: https://valencelab.app/#/
-- Source: https://github.com/zebadrabbit/Valence
+- Source: https://github.com/CommonLab-App/Valence
 
 ## Fact sheet
 
