@@ -8,7 +8,7 @@ import { Link } from 'react-router'
 export function PageHeader({ title, documentTitle, parent }: { title: string; documentTitle?: string | undefined; parent?: { to: string; label: string } }) {
   const tab = documentTitle ?? title
   useEffect(() => {
-    document.title = tab === 'Home' ? 'Valence' : `${tab} · Valence`
+    document.title = tab === 'Home' ? 'ValenceLab' : `${tab} · ValenceLab`
   }, [tab])
 
   return (

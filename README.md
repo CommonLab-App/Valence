@@ -1,7 +1,7 @@
 <h1 align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/media-kit/logos/valence-logo-on-dark.svg">
-    <img src="docs/media-kit/logos/valence-logo.svg" alt="Valence" width="320">
+    <img src="docs/media-kit/logos/valence-logo.svg" alt="ValenceLab" width="400">
   </picture>
 </h1>
 

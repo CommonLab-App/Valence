@@ -1,11 +1,11 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="logos/valence-logo-on-dark.svg">
-    <img src="logos/valence-logo.svg" alt="Valence" width="300">
+    <img src="logos/valence-logo.svg" alt="ValenceLab" width="372">
   </picture>
 </p>
 
-# Valence media kit
+# ValenceLab media kit
 
 Logos, screenshots and descriptions for writing about Valence. Everything here is free to use in coverage of Valence.
 
@@ -16,7 +16,7 @@ Logos, screenshots and descriptions for writing about Valence. Everything here i
 
 | | |
 |---|---|
-| Name | Valence |
+| Name | ValenceLab ("Valence" for short) |
 | What it is | Browser-based molecule explorer and virtual general-chemistry lab |
 | Price | Free |
 | Licence | MIT, open source |
@@ -72,7 +72,7 @@ The mark is a bent molecule: two bonds form the V, and the central atom carries 
 | `logos/*-mono-black.*`, `logos/*-mono-white.*` | one-colour printing |
 | `valence-social-card.png` | link previews (1200 × 630 at 2×) |
 
-The wordmark is set in Bricolage Grotesque Bold and outlined in the SVGs, so no font is needed. Keep clear space of at least one outer atom's width. Please don't recolour the atoms, stretch or rotate the mark, add effects, or reset the wordmark in another font.
+The wordmark is one lowercase word, "valencelab", set in Bricolage Grotesque: "valence" in Bold and "lab" in ExtraBold and cabbage pink (in the one-colour versions the weight alone sets it apart). It is outlined in the SVGs, so no font is needed. [`tools/build-logos.py`](tools/build-logos.py) rebuilds the logos and the social card. Keep clear space of at least one outer atom's width. Please don't recolour the atoms, stretch or rotate the mark, add effects, or reset the wordmark in another font.
 
 ## Colours
 
