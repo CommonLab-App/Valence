@@ -76,9 +76,11 @@ export function Layout() {
         {expanded && (
           <a
             href="https://commonlab.app/"
-            className="mt-2 rounded-md px-2.5 py-1.5 text-xs text-muted-foreground underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring"
+            className="mt-2 self-start rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            Part of CommonLab
+            {/* The badge from the CommonLab brand kit, one drawing per theme. */}
+            <img src={`${import.meta.env.BASE_URL}brand/part-of-commonlab-light.svg`} alt="Part of CommonLab" className="h-8 dark:hidden" />
+            <img src={`${import.meta.env.BASE_URL}brand/part-of-commonlab-dark.svg`} alt="Part of CommonLab" className="hidden h-8 dark:block" />
           </a>
         )}
       </nav>
