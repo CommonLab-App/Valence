@@ -71,6 +71,16 @@ export function Layout() {
             <span className={expanded ? '' : 'sr-only'}>{label}</span>
           </NavLink>
         ))}
+
+        {/* The umbrella credit from the naming record. Hidden with the labels: the collapsed rail has no room for it. */}
+        {expanded && (
+          <a
+            href="https://commonlab.app/"
+            className="mt-2 rounded-md px-2.5 py-1.5 text-xs text-muted-foreground underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Part of CommonLab
+          </a>
+        )}
       </nav>
 
       <main id="main" tabIndex={-1} className="min-w-0 flex-1 p-6 outline-none">
