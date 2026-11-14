@@ -1,63 +1,20 @@
 import { useId } from 'react'
+import { SELECT_CLASS, Settings as ShellSettings } from '@commonlab/shell'
 import { useAppState } from '@/app/AppState'
-import { PageHeader } from '@/app/PageHeader'
-import { VALENCE_LEVELS, type Prefs, type Tri } from '@/app/preferences'
-import { exportAll, NOT_SAVING_TEXT } from '@/app/progress/storage'
-import { Button } from '@/components/ui/button'
+import { VALENCE_LEVELS, type Prefs } from '@/app/preferences'
+import { storage } from '@/app/progress/storage'
 
-const SELECT_CLASS = 'h-9 rounded-md border bg-background px-2 text-sm'
-
-function TriSelect({ label, value, onChange }: { label: string; value: Tri; onChange: (value: Tri) => void }) {
-  const id = useId()
-  return (
-    <div className="flex items-center justify-between gap-4">
-      <label htmlFor={id}>{label}</label>
-      <select id={id} className={SELECT_CLASS} value={value} onChange={(e) => onChange(e.target.value as Tri)}>
-        <option value="system">System</option>
-        <option value="on">On</option>
-        <option value="off">Off</option>
-      </select>
-    </div>
-  )
-}
-
-function download(filename: string, text: string) {
-  const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }))
-  const link = document.createElement('a')
-  link.href = url
-  link.download = filename
-  document.body.append(link)
-  link.click()
-  link.remove()
-  setTimeout(() => URL.revokeObjectURL(url), 1000)
-}
-
+/** The shared shell's settings page, with ValenceLab's display level under dark mode and reduced motion. */
 export function Settings() {
-  const { store, persistent, prefs, updatePrefs, resetAll } = useAppState()
+  const state = useAppState()
+  const { prefs, updatePrefs } = state
   const levelId = useId()
 
   return (
-    <>
-      <PageHeader title="Settings" />
-
-      {!persistent && (
-        <p role="status" className="mb-6 max-w-prose rounded-md border p-3 text-sm">
-          {NOT_SAVING_TEXT}
-        </p>
-      )}
-
-      <section aria-labelledby="display-heading" className="mb-8 grid max-w-md gap-3">
-        <h2 id="display-heading" className="text-lg font-medium">
-          Display
-        </h2>
-        <TriSelect label="Dark mode" value={prefs.darkMode} onChange={(darkMode) => updatePrefs({ darkMode })} />
-        <TriSelect
-          label="Reduced motion"
-          value={prefs.reducedMotion}
-          onChange={(reducedMotion) => updatePrefs({ reducedMotion })}
-        />
-        {/* Under the two choices that offer System, and over the one that does not. */}
-        <p className="text-sm text-muted-foreground">For dark mode and reduced motion, System follows your operating system's setting.</p>
+    <ShellSettings
+      state={state}
+      storage={storage}
+      extraDisplay={
         <div className="flex items-center justify-between gap-4">
           <label htmlFor={levelId}>Valence display level</label>
           <select
@@ -73,34 +30,7 @@ export function Settings() {
             ))}
           </select>
         </div>
-      </section>
-
-      <section aria-labelledby="progress-heading" className="grid max-w-md gap-3">
-        <h2 id="progress-heading" className="text-lg font-medium">
-          My progress
-        </h2>
-        <p className="text-sm text-muted-foreground">
-          Progress is saved only in this browser. On a shared computer, the next person using this browser can see it;
-          clear it when you finish.
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <Button variant="outline" onClick={() => download('valence-progress.json', exportAll(store))}>
-            Export my progress
-          </Button>
-          <Button
-            variant="destructive"
-            // The theme's red on its own pale red measured 4.0 to 1 in the light theme: a darker red of the same hue there.
-            className="text-red-700 dark:text-destructive"
-            onClick={() => {
-              if (window.confirm('Clear all Valence progress and settings in this browser? This cannot be undone.')) {
-                resetAll()
-              }
-            }}
-          >
-            Clear my progress
-          </Button>
-        </div>
-      </section>
-    </>
+      }
+    />
   )
 }
